@@ -207,7 +207,7 @@ class AuthService {
         },
       }
     )
-    const resetLink = `http://localhost:5173/account/reset-password/${idReset}`
+    const resetLink = `https://mindmaps-fe.vercel.app/account/reset-password/${idReset}`
     const info = await sendMail(email, "Email confirm!", resetLink)
     return info
   }
