@@ -4,7 +4,7 @@ const GooglePassport = new GoogleStrategy(
   {
     clientID: process.env.CLIENT_ID_GOOGLE,
     clientSecret: process.env.CLIENT_SECRET_GOOGLE,
-    callbackURL: process.env.CALLBACK_URL,
+    callbackURL: "https://mindmaps-fe.vercel.app/auth/google/callback",
   },
   async (accessToken, refreshToken, profile, cb) => {
     const user = {
