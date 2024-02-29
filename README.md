@@ -13,8 +13,8 @@ The purpose of this application is helps users organize and represent informatio
   - BcryptJs (Create user's password)
   - Nodemailer (Send mail for user forgot password)
   - PassportJs (Support write Api for social)
-    - Multer (Local file storages)
-    - Cloudinary (Online cloud for saving images and files)
+  - Multer (Local file storages)
+  - Cloudinary (Online cloud for saving images and files)
 
 ## How to run this project?
 
