@@ -12,7 +12,6 @@ class MindmapService {
     key,
     q,
   }) => {
-    console.log("userId::", userId)
     const options = {
       order: [["created_at", "desc"]],
       where: {
@@ -121,7 +120,6 @@ class MindmapService {
     const { rows: mindmaps, count } = await Mindmap.findAndCountAll(options)
     return {
       mindmaps,
-      num: mindmaps.length,
       count,
     }
   }

@@ -6,10 +6,10 @@ const MindmapController = require("../../controllers/mindmap.controller")
 const { authentication } = require("../../auth/authUtils")
 const router = express.Router()
 
-router.use(authentication)
-router.get("/", asyncHandler(MindmapController.getAllMindmap))
 router.get("/deleted", asyncHandler(MindmapController.getAllMindmapDeleted))
 router.get("/:id", asyncHandler(MindmapController.getMindmapById))
+router.use(authentication)
+router.get("/", asyncHandler(MindmapController.getAllMindmap))
 
 router.get("/restore/:id", asyncHandler(MindmapController.restoreMindmap))
 router.post("/restore", asyncHandler(MindmapController.restoreAllMindmap))

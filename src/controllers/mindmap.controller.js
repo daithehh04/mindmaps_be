@@ -15,10 +15,7 @@ class MindmapController {
   static getAllMindmapDeleted = async (req, res) => {
     new SuccessResponse({
       message: "Get all mindmaps deleted success!",
-      metadata: await MindmapService.getAllMindmapDeleted({
-        ...req.query,
-        ...req.user,
-      }),
+      metadata: await MindmapService.getAllMindmapDeleted(req.query),
     }).send(res)
   }
 
