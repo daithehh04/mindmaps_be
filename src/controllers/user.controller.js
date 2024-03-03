@@ -1,5 +1,4 @@
-const { SuccessResponse, CREATED } = require("../core/success.response")
-const AuthService = require("../services/auth.service")
+const { SuccessResponse } = require("../core/success.response")
 const UserService = require("../services/user.service")
 
 class UserController {

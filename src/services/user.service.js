@@ -44,7 +44,7 @@ class UserService {
   }
 
   static async updateUserById({ id, name }) {
-    await User.update({ fullname: name }, { where: { id } })
+    await User.update({ name }, { where: { id } })
     const user = await User.findByPk(id, {
       attributes: { exclude: ["password"] },
     })
@@ -80,7 +80,6 @@ class UserService {
     return user
   }
   static async handleUpload(file) {
-    console.log("file::", file)
     const res = await cloudinary.uploader.upload(file.path, {
       public_id: "avatar_upload",
     })

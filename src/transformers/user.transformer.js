@@ -5,6 +5,7 @@ class UserTransformer extends Transformer {
     return {
       id: instance.id,
       name: instance.name,
+      desc: instance.desc,
       email: instance.email,
       picture: instance.picture,
       provider: instance.provider,
